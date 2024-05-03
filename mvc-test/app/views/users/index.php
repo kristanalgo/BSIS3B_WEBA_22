@@ -17,6 +17,7 @@
       <th></th>
     </tr>
     <?php if ($users != null) { ?>
+
       <?php foreach ($users as $item) { ?>
         <tr>
           <td><?= $item->firstname ?></td>
@@ -28,6 +29,7 @@
           </td>
         </tr>
       <?php } ?>
+
     <?php } else { ?>
       <tr>
         <td colspan="3">

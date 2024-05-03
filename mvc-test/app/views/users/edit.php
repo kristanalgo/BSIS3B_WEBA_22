@@ -5,6 +5,19 @@
   <form action="" method="POST" class="w-50 mx-auto">
     <h2>Edit User</h2>
 
+    <?php if (!empty($errors)): ?>
+
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+
+        <?php foreach ($errors as $error): ?>
+          <?= $error . "<br>" ?>
+        <?php endforeach; ?>
+
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
+    <?php endif; ?>
+
     <div class="mb-2">
       <label for="">First Name</label>
       <input name="firstname" value="<?= $user->firstname ?>" type="text" class="form-control">
